@@ -17,32 +17,48 @@
     /** @jsx React.DOM */
     var Dashboard = React.createClass({
 
-      loadData: function(){
-        return $.get('https://vivid-fire-489.firebaseio.com/' + this.props.url + '/.json')
+      loadData: function(url){
+        return $.get('https://vivid-fire-489.firebaseio.com/' + url + '/.json')
       },
 
       componentWillMount: function() {
-        debugger;
+        // debugger;
       },
 
       componentDidMount: function() {
-        debugger;
-        this.loadData().then(function(data){
+        // debugger;
+        this.loadData(this.props.url).then(function(data){
           this.setState({
             metric: data
           });
         }.bind(this));
       },
 
+      componentWillReceiveProps: function(nextProps) {
+        var lastUrl = this.props.url;
+        this.loadData(nextProps.url).then(function(data){
+          this.setState({
+            lastRoute: lastUrl,
+            metric: data
+          });
+        }.bind(this));
+      },
+
+      shouldComponentUpdate: function(nextProps, nextState){
+        return nextState.metric > 100;
+      }, 
+
       getInitialState: function() {
         return {
-          metric: 0
+          metric: 0,
+          lastRoute: "hello"
         }
       },
 
       render: function () {
         return (
           <div className="jumbotron">
+            {this.state.lastRoute}
             <h2>{this.state.metric} </h2>
           </div>
         );
