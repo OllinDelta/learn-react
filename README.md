@@ -31,6 +31,7 @@ boilerplate and is easier to reason about than traditional data binding.
 + Thinking in React: http://facebook.github.io/react/docs/thinking-in-react.html
 + Overview (Flux): http://facebook.github.io/flux/docs/overview.html
 + GitHub: https://github.com/facebook/react
++ React Addons: https://facebook.github.io/react/docs/addons.html
 
 ### Video
 
@@ -44,7 +45,6 @@ https://www.youtube.com/watch?v=qqVbr_LaCIo
 + Getting Started with React.js: ~~ https://www.youtube.com/watch?v=6ho8aOPUYxs ~~
 http://code.tutsplus.com/courses/getting-started-with-reactjs
 (I Paid the $15 for the course - let me know if you need access)
-
 
 
 ## What?
