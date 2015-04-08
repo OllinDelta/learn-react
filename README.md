@@ -22,7 +22,7 @@ Node.js — no heavy browser DOM required.
   * This means that every time something changes, React creates a _virtual_ DOM tree, checks for the differences between that and the existing DOM and then re-renders **only the differences** to the DOM
 + **Data flow:** React implements one-way reactive data flow which reduces
 boilerplate and is easier to reason about than traditional data binding.
-
++ Component Specs and Lifecycle: https://facebook.github.io/react/docs/component-specs.html
 
 ### Reading
 
