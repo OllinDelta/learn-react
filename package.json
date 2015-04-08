@@ -4,7 +4,8 @@
   "description": "learn how to use react.js for full-stack JS apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node_modules/react-tools/bin/jsx --watch /src /bin"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,11 @@
   },
   "homepage": "https://github.com/nelsonic/learn-react",
   "dependencies": {
-    "react": "^0.12.2"
+    "jsx": "^0.9.89",
+    "react": "^0.12.2",
+    "react-tools": "^0.13.1"
+  },
+  "devDependencies": {
+    "react-tools": "^0.13.1"
   }
 }
